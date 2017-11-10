@@ -215,15 +215,25 @@ namespace ShoppingCartDemo
             Console.WriteLine("Please choose from the following menu:");
 
             //TODO2: Put this in a loop
-            Console.WriteLine("1. {0}", _inventoryList[0].DisplayName());
-            Console.WriteLine("2. {0}", _inventoryList[2].DisplayName());
-            Console.WriteLine("3. {0}", _inventoryList[0].DisplayName());
-            Console.WriteLine("4. Finish purchasing");
 
-            Console.WriteLine("Which one would you like to purchase?");
+            for (int i = 0; i < listSize; i++)
+            { Console.WriteLine("{0}. {1}", (i + 1), _inventoryList[i].DisplayName()); }
 
-            Console.ReadLine();
-        }
+
+                Console.WriteLine("{0}. Finish purchasing", listSize + 1);
+
+                Console.WriteLine("Which one would you like to purchase?");
+
+                Console.ReadLine();
+            }
+
+
+                //Console.WriteLine("1. {0}", _inventoryList[0].DisplayName());
+                // Console.WriteLine("2. {0}", _inventoryList[2].DisplayName());
+                // Console.WriteLine("3. {0}", _inventoryList[0].DisplayName());
+                //Console.WriteLine("4. Finish purchasing");
+
+                
 
         /// <summary>
         /// Get the purchasing option from the user
